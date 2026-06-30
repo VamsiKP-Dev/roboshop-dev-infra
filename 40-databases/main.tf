@@ -31,7 +31,7 @@ resource "aws_instance" "mongodb" {
 
     provisioner "remote-exec" {
       inline = [ 
-        "chmod +x /tmp/bootstrap.sh"
+        "chmod +x /tmp/bootstrap.sh",
         "sudo sh /tmp/bootstrap.sh mongodb ${var.var.environment}"
        ]
     }
